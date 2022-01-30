@@ -1,0 +1,19 @@
+// inputs
+
+input.lt-input{
+    min-width: 330px !important;
+    background:none;
+    border: none;
+    @extend .lt-bg-white;
+    margin: 7px 0 !important;
+    padding: 5px 10px;
+    @include radius-25rem;
+    border:1px solid gainsboro
+}
+input.lt-input:focus{
+    box-shadow: inset none !important;
+}
+
+input.lt-input:active{
+    box-shadow: inset none !important;
+}

@@ -1,0 +1,103 @@
+
+.lt-tabs{
+    width: 700px;
+    height: 50vh;
+    @extend .lt-bg-white;
+    position: relative;
+    overflow: hidden
+}
+
+.lt-tabs-dark{
+    @extend .lt-bg-navy;
+}
+
+// tabs head 
+
+.lt-tabs-head{
+    display: flex;
+    min-height: 50px;
+    justify-content: space-between;
+    align-items: center;
+    font-size: 18px;
+}
+
+.lt-tabs-dark .lt-tabs-head{
+    @extend .lt-bg-dark;
+}
+
+
+//  single tab
+.lt-tabs-dark .lt-tab{
+    @extend .lt-text-white;
+}
+
+.lt-tab{
+    min-width: fit-content;
+    @extend .lt-text-center;
+    transition: .5s;
+    cursor: pointer;
+    list-style: none;
+    min-height: inherit !important;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+}
+
+.lt-tabs-dark .lt-active-tab{
+    @extend .lt-bg-navy;
+}
+
+.lt-active-tab{
+    @extend .lt-bg-primary;
+    @extend .lt-text-white;
+}
+
+.lt-tab:hover{
+    @extend .lt-bg-primary;
+    @extend .lt-text-white;
+}
+
+.lt-bg-dark .lt-tab:hover{
+    @extend .lt-bg-navy;
+}
+
+// body
+
+.lt-tab-body{
+    width: 100%;
+    height: 100%;
+    
+    position: relative;
+}
+
+// layer
+
+.lt-active-layer{
+    z-index: 1 !important;
+}
+.lt-tab-layer{
+    position: absolute;
+    @extend .lt-bg-white;
+    height: 100%;
+    width: 100%;
+    z-index: -1;
+    padding: 15px;
+
+}
+
+.lt-tabs-dark .lt-tab-layer {
+    @extend .lt-bg-navy;
+    
+}
+.lt-tabs-dark .lt-tab-body .lt-tab-title,.lt-tabs-dark .lt-tab-body .lt-tab-text{
+    color: $white;
+}
+
+
+.lt-tab-text{
+    opacity: .7;
+    width: 80%;
+}
+
+

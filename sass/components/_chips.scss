@@ -1,0 +1,29 @@
+
+
+
+.lt-chips{
+    width: fit-content !important;
+    width: -moz-fit-content !important;
+    @extend .lt-bg-white;
+    padding: 6px 10px;
+    margin: 5px ;
+    border-radius: 5px;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+}
+.lt-chips i{
+    transition: .5s;
+    margin: 0 5px;
+}
+.lt-chips.lt-chips-dark i {
+    color: $white;
+}
+.lt-chips i:hover{
+    @extend .lt-text-danger;
+}
+.lt-chips-dark{
+    @extend .lt-bg-dark;
+    @extend .lt-text-white;
+}
+

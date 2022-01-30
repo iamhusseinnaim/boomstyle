@@ -1,0 +1,74 @@
+$cols:12,11,10,9,8,7,6,5,4,3,2,1;
+$full:100%;
+$margin:5px;
+
+.lt-row{
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.lt-container{
+    width: 85%;
+    margin: auto;
+}
+
+
+@each $col in $cols {
+    .lt-col-#{$col}{
+        width: calc(#{$full} / #{$col} - #{$margin}) !important;
+    }
+}
+
+
+
+@media (max-width:1900px){
+    @each $col in $cols {
+        .lt-col-xl-#{$col}{
+            width: calc(#{$full} / #{$col} - #{$margin}) !important;
+        }
+
+    }
+
+}
+
+@media (max-width:1600px){
+    @each $col in $cols {
+        .lt-col-md-#{$col}{
+            width: calc(#{$full} / #{$col} - #{$margin}) !important;
+        }
+    }
+ 
+    
+
+}
+
+@media (max-width:1000px){
+    @each $col in $cols {
+        .lt-col-sm-#{$col}{
+            width: calc(#{$full} / #{$col} - #{$margin}) !important;
+        }
+    }
+    .lt-container{
+        width: 100%;
+
+    }
+    
+
+}
+
+@media (max-width:700px){
+    @each $col in $cols {
+        .lt-col-xs-#{$col}{
+            width: calc(#{$full} / #{$col}) !important;
+        }
+    }
+
+    .lt-container{
+        width: 98%;
+    }
+
+    
+
+    
+}
+

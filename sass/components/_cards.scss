@@ -1,0 +1,21 @@
+.lt-card{
+    width: 300px;
+    background-color: black;
+}
+
+.lt-card-image{
+    max-width: 300px;
+    max-height: 60%;
+    min-height: 200px;
+    background-color: white;
+}
+
+.lt-card-title{
+    font-size: 20px !important;
+}
+
+.lt-card-sub-text{
+    font-size: 12px;
+    line-height: 20px;
+    opacity: .7;
+}

@@ -1,0 +1,24 @@
+@import url('https://fonts.googleapis.com/css2?family=Noto+Naskh+Arabic&display=swap');
+
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    font-family: 'Noto Naskh Arabic', sans-serif;
+}
+
+h1,h2,h3,h4,h5,h6,li,ul,p,span ,i{
+    color: $dark;
+}
+i.fi{
+    font-size: 20px ;
+    width: 24px ;
+    height: 24px ;
+}
+
+
+input,select{
+    height: 46px;
+}
+
+

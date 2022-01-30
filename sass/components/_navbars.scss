@@ -1,0 +1,126 @@
+%light-border{
+    border-color: rgba(255, 255, 255, 0.685) !important;
+}
+%light-border-left{
+    border-left: 1px solid;
+    @extend %light-border;
+}
+%light-border-right{
+    border-right: 1px solid;
+    @extend %light-border;
+}
+    
+// drawers
+.lt-nav-drawer{
+    width: 300px;
+    height: 100%;
+    position: fixed;
+    top: 0;
+    @extend .lt-bg-white;
+    
+}
+
+.lt-nav-drawer-dark{
+    @extend .lt-bg-dark;
+}
+
+
+
+.lt-nav-drawer-head{
+    height: 70px;
+    padding: 0 10px;
+    border-bottom: 1px solid rgba(220, 220, 220, 0.568);
+    display: flex;
+    align-items: center;
+}
+
+.lt-nav-drawer-items{
+    margin: 10px 0;
+    margin-top: 0;
+}
+
+.lt-nav-drawer-item{
+    height: 50px;
+    @extend .lt-p-2;
+    transition: .5s;
+    list-style: none !important;
+    cursor: pointer;
+    
+}
+.lt-nav-drawer-item:not(:last-child){
+    border-bottom: 1px solid rgba(255, 255, 255, 0.178);
+}
+.lt-nav-drawer-dark .lt-nav-drawer-item{
+    @extend .lt-text-white
+}
+.lt-active-nav-drawer-item,.lt-nav-drawer-item:hover{
+    @extend .lt-bg-primary;
+    @extend .lt-text-white;
+}
+
+.lt-nav-drawer-dark .lt-active-nav-drawer-item,.lt-nav-drawer-dark .lt-nav-drawer-item:hover{
+    @extend .lt-bg-navy;
+    @extend .lt-text-white;
+}
+
+.lt-right-drawer{
+    right:  0 !important;
+    direction: rtl !important;
+    @extend %light-border-left;
+}
+.lt-left-drawer{
+    left: 0 !important;
+    direction: ltr !important;
+    @extend %light-border-right;
+}
+
+// bottom nav 
+
+.lt-nav-bottom{
+    width: 100%;
+    display: none;
+    position: fixed;
+    bottom: 0;
+    height: 50px;
+    justify-content: space-around;
+    align-items: center;
+    flex-direction: row-reverse;
+    
+}
+
+.lt-nav-bottom .lt-nav-link {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    transition: 1s;
+}
+.lt-nav-bottom .lt-nav-link ,.lt-nav-bottom .lt-nav-link i{
+    @extend .lt-text-white;
+    list-style: none;
+    cursor: pointer;
+    margin: auto;
+}
+.lt-nav-bottom .lt-nav-link i{
+    opacity: .7;
+}
+.lt-nav-bottom .active-link{
+    transition: 1s;
+}
+.lt-nav-bottom .active-link i{
+    opacity: 1 !important;
+}
+.lt-nav-bottom .lt-nav-link .link-text{
+    @extend .lt-text-white;
+    font-size: 12px;
+}
+.lt-nav-bottom .active-link .link-text{
+    display: block;
+}
+
+
+@media (max-width:500px){
+    .lt-nav-bottom{
+        display: flex;
+    }
+}
