@@ -4,7 +4,6 @@
     padding: 0;
     margin: 0;
     box-sizing: border-box;
-    font-family: 'Noto Naskh Arabic','Titillium Web', sans-serif !important;
 }
 @import url('https://fonts.googleapis.com/css2?family=Rubik+Beastly&display=swap');
 
@@ -45,9 +44,9 @@
     font-feature-settings: 'liga';
   }
 
-h1,h2,h3,h4,h5,h6,li,ul,p,span ,i{
-    color: $dark;
-}
+// h1,h2,h3,h4,h5,h6,li,ul,p,span ,i{
+//     color: $dark;
+// }
 i.fi{
     font-size: 20px ;
     width: 24px ;
