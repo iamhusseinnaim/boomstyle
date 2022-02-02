@@ -8,35 +8,48 @@
     <link rel="stylesheet" href="./css/LT.min.css">
     <link rel="stylesheet" href="./style.css">
     <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
-
-
     <title> LT Frame Work  </title>
-
 </head>
+<body class="  lt-d-flex lt-justify-content-center">
 
+    <nav class="lt-nav-drawer  lt-right-drawer">
+        <div class="lt-nav-drawer-head">
+            <img alt="HS" src="./image/dress.jpeg"  class="lt-avatar lt-text-white lt-avatar-lg lt-bg-danger" />
+            <div> 
+                <span class="lt-text-xs lt-text-dark"> Hussein Naim </span>
+            </div>
+        </div>
+        <ul class="lt-nav-drawer-items">
+            <li class="lt-nav-drawer-item lt-active-nav-drawer-item"> background color </li>
+            <li class="lt-nav-drawer-item">list item 2</li>
+            <li class="lt-nav-drawer-item">list item 3</li>
+            <li class="lt-nav-drawer-item">list item 4</li>
+            <li class="lt-nav-drawer-item">list item 5</li>
+            <li class="lt-nav-drawer-item">list item 6</li>
+            <li class="lt-nav-drawer-item">list item 7</li>
+            <li class="lt-nav-drawer-item">list item 8</li>
+            <li class="lt-nav-drawer-item">list item 9</li>
+            <li class="lt-nav-drawer-item">list item 10</li>
+        </ul>
 
-
-<body class="lt-bg-light  lt-d-flex lt-justify-content-center">
-
-    <nav class="lt-nav-bottom lt-bg-danger lt-nav-bottom-fab">
-        <li class="lt-nav-link active-link"> <i class="material-icons">home</i> <span class="link-text"> home </span> </li>
-        <li class="lt-nav-link"> <i class="material-icons">account_circle</i> <span class="link-text"> account </span> </li>
-        <li class="lt-nav-link"> <i class="material-icons">local_shipping</i> <span class="link-text"> orders </span> </li>
-        <li class="lt-nav-link"> <i class="material-icons">menu</i> <span class="link-text"> menu </span> </li>
     </nav>
 
+    <input type="color" name="color" id="">
 
+
+
+
+    <!-- scripts  -->
     <script src="./js/jquery-3.6.0.min.js"></script>
     <script src="./js/dist/main.js"></script>
-
+    <script src="./index.js"></script>
     <script>
-        $('.lt-nav-link').click(function (e) { 
+        $('[type=color]').change(function (e) { 
             e.preventDefault();
-            $(this).addClass('active-link');
-            $(this).siblings().removeClass('active-link');
+            document.body.style.backgroundColor = $(this).val()
+            console.log(this.value)
         });
     </script>
-
-
+    
 </body>
 </html>

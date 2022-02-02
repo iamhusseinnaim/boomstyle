@@ -1,0 +1,10 @@
+drop-menu{
+    display: flex;
+    flex-direction: column;
+    max-height: 45px;
+    width: 300px;
+    overflow: hidden;
+    @extend .lt-bg-white;
+}
+
+

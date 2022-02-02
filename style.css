@@ -1,5 +1,5 @@
 @import url('https://fonts.googleapis.com/css2?family=Rubik+Beastly&display=swap');
-
+@import url('https://fonts.googleapis.com/css2?family=Dongle&display=swap');
 @font-face {
     font-family: 'Material Icons';
     font-style: normal;
@@ -12,7 +12,7 @@
       url(https://example.com/MaterialIcons-Regular.ttf) format('truetype');
   }
 
-  .material-icons {
+  .material-icons ,.lt-select::after{
     font-family: 'Material Icons';
     font-weight: normal;
     font-style: normal;
@@ -42,10 +42,10 @@ body{
 
     width: 100%;
     height: 100%;
-    position: relative;
-    direction: rtl;
-    padding: 0 20px;
-    top: 50px;
+    display: flex;
+    align-items: start;
+    justify-content: center;
+    position: fixed;
 }
 
 .logo{
@@ -53,48 +53,72 @@ body{
     font-family: 'Rubik Beastly', cursive;
 }
 
-.lt-tab{
-  width: calc(700px / 4);
-}
-
-
-.lt-banner{
-  margin:5px;
-  height: fit-content !important;
-}
-
-#cont{
-  right: 0;
-  top: 0;
-  position: fixed;
-}
-
-.fab{
-  position: absolute;
-  width: 45px;
+.lt-select,.lt-select option{
+  background: aliceblue;
+  border-radius: 5px;
+  width: 300px;
   height: 45px;
-  border-radius: 50%;
-  display: flex;
-  top: -25px;
-  align-items: center;
-  justify-content: center;
-
-}
-.fab .btn-fab{
-  width: 36px;
-  height: 36px;
-  border-radius: inherit;
-  color: white;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  /* font-size: 25px; */
   cursor: pointer;
-  text-align: center;
-  margin: auto;
+  /* overflow-x: hidden !important; */
+  transition: .5s;
+  text-transform: uppercase;
+  display: flex;
+  flex-direction: column;
+  position: relative;
+  overflow-y: hidden;
+}
+
+.lt-select::after{
+  content: 'arrow_drop_down';
+  width: 20px;
   position: absolute;
   top: 0;
-  left: 0;
-  right: 0;
   bottom: 0;
+  color: black;
+  background: white;
+  margin: auto;
+  left: 5px;
+  border-radius: 50%;
+  height: 20px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+
+
+.lt-select option{
+  padding: 0 5px;
+  direction: ltr;
+  display: flex;
+  align-items: center;
+  font-family: 'Dongle', sans-serif;
+  color: rgb(95, 95, 255);
+  font-size: 20px;
+  border-radius: 0;
+  justify-content: center;
+  min-height: 45px;
+}
+
+.lt-select option:hover{
+  background-color: black !important;
+  color: white !important;
+}
+
+
+.active-option{
+  order: -1;
+  transition: .5s;
+  background-color: black;
+  color: white;
+}
+
+input[type=color]{
+  width: 300px;
+  border: none;
+  margin: 10px 0;
+  border-radius: 10px !important;
+  appearance: none;
+  outline: none;
+  position: relative;
 }

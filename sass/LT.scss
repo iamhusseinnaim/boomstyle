@@ -3,6 +3,7 @@
 @import './colors';
 @import './gloabl';
 @import './utils/backgrounds';
+@import './components/helper';
 @import './components/cards';
 @import './utils/buttons';
 @import './components/navbars';
@@ -11,7 +12,9 @@
 @import './components/chips';
 @import './components/banner';
 @import './design/grid';
-@import './class';
+@import './components/table';
 @import './components/snackBars';
+@import './components/build/dropdown';
 
+@import './class';
 @import url(../icons/uicons-regular-rounded/uicons-regular-rounded/css/uicons-regular-rounded.css);
