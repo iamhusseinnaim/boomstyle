@@ -252,9 +252,14 @@ nav.lt-lg-nav{
         transition: .5s;
         top: 53px;
         right: -1000%;
+        padding: 0 !important;
         .lt-nav-drawer-items{
             overflow-y:scroll ;
             scrollbar-width: thin;
+            width: 100% !important;
+            .lt-nav-drawer-item{
+                width: inherit !important;
+            }
         }
 
         .lt-nav-drawer-head .lt-links{
