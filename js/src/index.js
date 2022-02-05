@@ -7,9 +7,34 @@ import '../components/slider';
 
 // ? gloabl 
 $(document).ready(function () {
-    let all = $('*')
-    all.css({
-        width:all.data('width'),
-        
-    })
+    
+
+
+    
+document.onscroll = ()=>{
+
+    let scrollY = window.scrollY;
+    if(scrollY >= 110){
+        $('.lt-lg-nav,.lt-mobile-nav').addClass('pos-fixed');
+        $('.lt-lg-nav,.lt-mobile-nav').addClass('lt-bottom-light');
+    }else{
+        $('.lt-lg-nav,.lt-mobile-nav').removeClass('pos-fixed');
+        $('.lt-lg-nav,.lt-mobile-nav').addClass('lt-bottom-light');
+    }
+
+    if($('.lt-menu').hasClass('show-menu')){
+        $('.lt-menu').removeClass('show-menu');
+        $('main').removeClass('lt-blur')
+    }
+
+}
+
+
+$('.show-menu-button').click(function (e) { 
+    e.preventDefault();
+    $('.lt-menu').toggleClass('show-menu');
+    $('main').toggleClass('lt-blur');
+});
+
+
 });
