@@ -233,19 +233,19 @@
     @extend .lt-avatar;
 }
 .lt-avatar-lg{
-    width: 50px !important;
-    height: 50px !important;
+    min-width: 50px !important;
+    min-height: 50px !important;
 }
 .lt-avatar.lt-bg-danger,.lt-avatar.lt-bg-primary{
     @extend .lt-text-white;
 }
 .lt-avatar-md{
-    width: 40px !important;
-    height: 40px !important;
+    min-width: 40px !important;
+    min-height: 40px !important;
 }
 .lt-avatar-sm{
-    width: 30px !important;
-    height: 30px !important;
+    min-width: 30px !important;
+    min-height: 30px !important;
 }
 .lt-avatar img{
     max-width: 100% !important;
