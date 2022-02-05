@@ -1,7 +1,7 @@
 
 .lt-tabs{
-    width: 700px;
-    height: 50vh;
+    width: auto;
+    height:auto;
     @extend .lt-bg-white;
     position: relative;
     overflow: hidden
@@ -29,10 +29,11 @@
 //  single tab
 .lt-tabs-dark .lt-tab{
     @extend .lt-text-white;
+    
 }
 
 .lt-tab{
-    min-width: fit-content;
+    width: 100% !important;
     @extend .lt-text-center;
     transition: .5s;
     cursor: pointer;
@@ -74,14 +75,13 @@
 // layer
 
 .lt-active-layer{
-    z-index: 1 !important;
+    display: block !important;
 }
 .lt-tab-layer{
-    position: absolute;
-    @extend .lt-bg-white;
+    @extend .lt-bg-light;
     height: 100%;
     width: 100%;
-    z-index: -1;
+    display: none;
     padding: 15px;
 
 }

@@ -1,5 +1,8 @@
 @mixin border {
-    border: 1px solid;
+    border: 1px solid ;
+}
+@mixin border-gainsboro {
+    border-color: gainsboro !important;
 }
 
 
@@ -9,6 +12,11 @@
 
 @mixin border-white {
     border: 1px solid #fff !important;
+}
+
+@mixin gradient-light {
+    background: rgb(255,255,255) !important;
+    background: linear-gradient(90deg, rgba(255,255,255,1) 0%, rgba(250,254,255,1) 34%, rgba(255,255,255,1) 100%) !important; 
 }
 
 @mixin radius-25rem {

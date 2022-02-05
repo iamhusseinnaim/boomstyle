@@ -1,15 +1,25 @@
 @import url('https://fonts.googleapis.com/css2?family=Rubik+Beastly&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Dongle&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Baloo+Bhaijaan+2&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Noto+Naskh+Arabic:wght@500&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Baloo+Bhaijaan+2:wght@500&display=swap');
 @font-face {
     font-family: 'Material Icons';
     font-style: normal;
     font-weight: 400;
-    src: url(https://example.com/MaterialIcons-Regular.eot); /* For IE6-8 */
     src: local('Material Icons'),
       local('MaterialIcons-Regular'),
-      url(https://example.com/MaterialIcons-Regular.woff2) format('woff2'),
-      url(https://example.com/MaterialIcons-Regular.woff) format('woff'),
-      url(https://example.com/MaterialIcons-Regular.ttf) format('truetype');
+    
+  }
+
+  @font-face {
+    font-family: Noto;
+    src: url(./noto-kufi-arabic-61eb13c9e3/ArbFonts.com-\(5\)/ArbFONTS-22015-notokufiarabic-regular.ttf);
+  }
+  *{
+    font-family:Noto, 'Open Sans', sans-serif;
+    font-weight: lighter !important;
   }
 
   .material-icons ,.lt-select::after{
@@ -39,86 +49,10 @@
   
 
 body{
-
-    width: 100%;
-    height: 100%;
-    display: flex;
-    align-items: start;
-    justify-content: center;
-    position: fixed;
+  overflow-x: hidden;
+  height: 4000px;
 }
-
 .logo{
     letter-spacing: 20px;
     font-family: 'Rubik Beastly', cursive;
-}
-
-.lt-select,.lt-select option{
-  background: aliceblue;
-  border-radius: 5px;
-  width: 300px;
-  height: 45px;
-  cursor: pointer;
-  /* overflow-x: hidden !important; */
-  transition: .5s;
-  text-transform: uppercase;
-  display: flex;
-  flex-direction: column;
-  position: relative;
-  overflow-y: hidden;
-}
-
-.lt-select::after{
-  content: 'arrow_drop_down';
-  width: 20px;
-  position: absolute;
-  top: 0;
-  bottom: 0;
-  color: black;
-  background: white;
-  margin: auto;
-  left: 5px;
-  border-radius: 50%;
-  height: 20px;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-}
-
-
-
-.lt-select option{
-  padding: 0 5px;
-  direction: ltr;
-  display: flex;
-  align-items: center;
-  font-family: 'Dongle', sans-serif;
-  color: rgb(95, 95, 255);
-  font-size: 20px;
-  border-radius: 0;
-  justify-content: center;
-  min-height: 45px;
-}
-
-.lt-select option:hover{
-  background-color: black !important;
-  color: white !important;
-}
-
-
-.active-option{
-  order: -1;
-  transition: .5s;
-  background-color: black;
-  color: white;
-}
-
-input[type=color]{
-  width: 300px;
-  border: none;
-  margin: 10px 0;
-  border-radius: 10px !important;
-  appearance: none;
-  outline: none;
-  position: relative;
 }

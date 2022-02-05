@@ -5,7 +5,7 @@ export default class Chipsies{
 
     append_icon(){
         
-        $('.lt-chips').append('<i class="fi  fi-rr-cross-circle"></i>');
+        // $('.lt-chips').append('<i class="fi  fi-rr-cross-circle"></i>');
 
     }
 }

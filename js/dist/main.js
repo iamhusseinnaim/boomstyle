@@ -26,7 +26,7 @@ eval("\n\n//# sourceURL=webpack://my-webpack-project/./components/build/dropdown
 /***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
 
 "use strict";
-eval("__webpack_require__.r(__webpack_exports__);\n/* harmony export */ __webpack_require__.d(__webpack_exports__, {\n/* harmony export */   \"default\": () => (/* binding */ Chipsies)\n/* harmony export */ });\nclass Chipsies {\n  constructor() {\n    this.append_icon();\n  }\n\n  append_icon() {\n    $('.lt-chips').append('<i class=\"fi  fi-rr-cross-circle\"></i>');\n  }\n\n}\nnew Chipsies();\n\n//# sourceURL=webpack://my-webpack-project/./components/chips.js?");
+eval("__webpack_require__.r(__webpack_exports__);\n/* harmony export */ __webpack_require__.d(__webpack_exports__, {\n/* harmony export */   \"default\": () => (/* binding */ Chipsies)\n/* harmony export */ });\nclass Chipsies {\n  constructor() {\n    this.append_icon();\n  }\n\n  append_icon() {// $('.lt-chips').append('<i class=\"fi  fi-rr-cross-circle\"></i>');\n  }\n\n}\nnew Chipsies();\n\n//# sourceURL=webpack://my-webpack-project/./components/chips.js?");
 
 /***/ }),
 
@@ -38,6 +38,17 @@ eval("__webpack_require__.r(__webpack_exports__);\n/* harmony export */ __webpac
 
 "use strict";
 eval("__webpack_require__.r(__webpack_exports__);\n/* harmony export */ __webpack_require__.d(__webpack_exports__, {\n/* harmony export */   \"default\": () => (/* binding */ Navigations)\n/* harmony export */ });\nclass Navigations {\n  constructor() {\n    this.toggle_drawer_tab();\n  }\n\n  toggle_drawer_tab() {\n    $('.lt-nav-drawer-item').click(function (e) {\n      e.preventDefault();\n      $(this).addClass('lt-active-nav-drawer-item');\n      $(this).siblings().removeClass('lt-active-nav-drawer-item');\n    });\n  }\n\n}\nnew Navigations();\n\n//# sourceURL=webpack://my-webpack-project/./components/navigations.js?");
+
+/***/ }),
+
+/***/ "./components/slider.js":
+/*!******************************!*\
+  !*** ./components/slider.js ***!
+  \******************************/
+/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
+
+"use strict";
+eval("__webpack_require__.r(__webpack_exports__);\n/* harmony export */ __webpack_require__.d(__webpack_exports__, {\n/* harmony export */   \"default\": () => (/* binding */ newSlider)\n/* harmony export */ });\nclass Slider {\n  constructor(id) {\n    $('.lt-slider-btn').click(function (e) {\n      e.preventDefault();\n      let action = $(this).data('action');\n      let mainSlider = $(id);\n      let img = $(id + ' img');\n      var top = mainSlider.offset().top;\n      var left = mainSlider.offset().left;\n      var activeimg;\n\n      for (let i = 0; i < img.length; i++) {\n        if ($(img[i]).offset().top == top && $(img[i]).offset().left == left) {\n          activeimg = $(img[i]).next();\n        }\n      }\n\n      mainSlider.animate({\n        scrollLeft: action + img.innerWidth()\n      });\n      console.log(top, left, activeimg);\n    });\n    setInterval(() => {\n      try {\n        updateImg();\n      } catch {}\n    }, 5000); // update images\n\n    function updateImg() {\n      let mainSlider = $(id);\n      let img = $(id + ' img');\n      var top = mainSlider.offset().top;\n      var left = mainSlider.offset().left;\n      var activeimg;\n\n      for (let i = 0; i < img.length; i++) {\n        if ($(img[i]).offset().top == top && $(img[i]).offset().left == left) {\n          activeimg = $(img[i]).next();\n        }\n      }\n\n      mainSlider.animate({\n        scrollLeft: '-' + img.innerWidth()\n      });\n\n      if (!activeimg.length) {\n        mainSlider.animate({\n          scrollLeft: img.innerWidth()\n        });\n      }\n    }\n\n    return $(id);\n  }\n\n}\n\nfunction newSlider(id) {\n  return new Slider(id);\n}\n\n//# sourceURL=webpack://my-webpack-project/./components/slider.js?");
 
 /***/ }),
 
@@ -59,7 +70,7 @@ eval("__webpack_require__.r(__webpack_exports__);\n/* harmony export */ __webpac
 /***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
 
 "use strict";
-eval("__webpack_require__.r(__webpack_exports__);\n/* harmony import */ var _components_tabs__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ../components/tabs */ \"./components/tabs.js\");\n/* harmony import */ var _components_navigations__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ../components/navigations */ \"./components/navigations.js\");\n/* harmony import */ var _components_chips__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ../components/chips */ \"./components/chips.js\");\n/* harmony import */ var _components_build_dropdown__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ../components/build/dropdown */ \"./components/build/dropdown.js\");\n/* harmony import */ var _components_build_dropdown__WEBPACK_IMPORTED_MODULE_3___default = /*#__PURE__*/__webpack_require__.n(_components_build_dropdown__WEBPACK_IMPORTED_MODULE_3__);\n\n\n\n // ? gloabl \n\n$(document).ready(function () {\n  let all = $('*');\n  all.css({\n    width: all.data('width')\n  });\n});\n\n//# sourceURL=webpack://my-webpack-project/./src/index.js?");
+eval("__webpack_require__.r(__webpack_exports__);\n/* harmony import */ var _components_tabs__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ../components/tabs */ \"./components/tabs.js\");\n/* harmony import */ var _components_navigations__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ../components/navigations */ \"./components/navigations.js\");\n/* harmony import */ var _components_chips__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ../components/chips */ \"./components/chips.js\");\n/* harmony import */ var _components_build_dropdown__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ../components/build/dropdown */ \"./components/build/dropdown.js\");\n/* harmony import */ var _components_build_dropdown__WEBPACK_IMPORTED_MODULE_3___default = /*#__PURE__*/__webpack_require__.n(_components_build_dropdown__WEBPACK_IMPORTED_MODULE_3__);\n/* harmony import */ var _components_slider__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! ../components/slider */ \"./components/slider.js\");\n\n\n\n\n // ? gloabl \n\n$(document).ready(function () {\n  let all = $('*');\n  all.css({\n    width: all.data('width')\n  });\n});\n\n//# sourceURL=webpack://my-webpack-project/./src/index.js?");
 
 /***/ })
 

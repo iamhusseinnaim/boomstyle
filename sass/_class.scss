@@ -1,4 +1,10 @@
 // display
+.lt-flex-column{
+    flex-direction: column !important;
+}
+.lt-flex-wrap{
+    flex-wrap: wrap !important;
+}
 .lt-d-flex{
     display: flex !important;
 }
@@ -34,6 +40,11 @@
 }
 .pos-fixed{
     position: fixed !important;
+    transition: .5s;
+    z-index: 3;
+}
+.lt-bottom-light{
+    border-bottom: 1px solid gainsboro !important;
 }
 .pos-rel{
     position: relative !important;
@@ -82,6 +93,22 @@
 .lt-m-auto{
     margin: auto !important;
 }
+.lt-mt-1{
+    margin-top: 5px;
+}
+.lt-mt-2{
+    margin-top: 10px;
+}
+
+
+.lt-m-side-5{
+    margin-left: 5px !important;
+    margin-right: 5px !important;
+}
+.lt-m-side-2{
+    margin-left: 2px !important;
+    margin-right: 2px !important;
+}
 
 .lt-p-0{
     padding: 0 !important;
@@ -111,6 +138,16 @@
 }
 
 // text
+.lt-text-gold{
+    color: $gold !important;
+}
+.lt-data-row{
+    border: 1px solid gainsboro;
+    max-width: 500px;
+    width: 100%;
+    padding: 10px;
+    text-align: center;
+}
 .lt-text{
     margin: 0 10px !important;
     display: flex;
@@ -118,11 +155,16 @@
 .lt-text-muted{
     opacity: .7 !important;
 }
+.lt-text-primary{
+    color: $primary;
+}
 .hr{
-    margin-top: 5px;
-    margin-bottom: 5px;
-    border: 1px solid rgba(220, 220, 220, 0.466);
-    }
+    opacity: .1 !important;
+    margin-top: 10px !important;
+    margin-bottom: 10px !important;
+    height: 1px !important;
+}
+
 .lt-br{
     display: block !important
 }
@@ -165,7 +207,7 @@
     text-align: right !important;
 }
 // cursor 
-.pointer{
+.lt-pointer{
     cursor: pointer !important;
 }
 
@@ -181,19 +223,33 @@
 .lt-avatar{
     border-radius: 50% !important;
     object-fit: cover !important;
-    overflow: hidden !important;
     display: flex !important;
     align-items: center !important;
     justify-content: center !important;
     text-transform: uppercase !important;
     object-position: center !important;
 }
+.lt-avatar img{
+    @extend .lt-avatar;
+}
 .lt-avatar-lg{
     width: 50px !important;
     height: 50px !important;
 }
+.lt-avatar.lt-bg-danger,.lt-avatar.lt-bg-primary{
+    @extend .lt-text-white;
+}
 .lt-avatar-md{
+    width: 40px !important;
+    height: 40px !important;
+}
+.lt-avatar-sm{
     width: 30px !important;
     height: 30px !important;
 }
+.lt-avatar img{
+    max-width: 100% !important;
+    max-height: 100% !important;
+}
+
 

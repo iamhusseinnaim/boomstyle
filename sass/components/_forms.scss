@@ -1,90 +1,52 @@
-// inputs
-.lt-input[type=checkbox]{
-    @extend %non-default;
-}
-// checkbox
-.lt-input[type=checkbox],.lt-input::after,.lt-input::before,.lt-input:checked::after,.lt-input:checked::before{
-    @extend .material-icons;
-    font-size: 16px !important;
-}
-input.lt-input[type=checkbox]{
-    width: 18px !important;
-    height: 18px !important;
+
+
+
+
+.lt-search-form{
     @extend .lt-bg-white;
-    border: 1px solid gainsboro;
-    border-radius: .10rem;
-}
-input.lt-input[type=checkbox]:checked{
-    background-color: $lightBlue !important;
-    @extend .lt-text-white;
-    border: none;
-    text-align: center;
-}
-.lt-input[type=checkbox]:checked::after{
-    content: 'check' !important;
-    width: inherit !important;
-    height: inherit !important;
-    padding: 0 !important;
-    margin: 0 !important;
-}
-
-// radio button
-
-.lt-input[type=radio],.lt-input[type=radio]:checked{
-    width: 18px;
-    margin-left:2.5px !important;
-    margin-right: 2.5px !important;
-    height: 18px;
-}
-
-.lt-input[type=radio]:before{
-    content: 'radio_button_unchecked' !important;
-    padding: 0 !important;
-    box-shadow:0px 0px 10px 0px rgba(0, 0, 0, 0.281);
-    margin: 0 !important;
+    border: 1px solid ;
+    @include border-gainsboro;
+    @include radius-25rem;
+    overflow: hidden;
+    position: relative;
     display: flex;
-    border-radius: 50% !important;
+    align-items: center;
+}
+
+.lt-search-form .lt-select select{
+    padding:0 5px !important;
+    border:none;
+    border-left: .5px solid !important;
+    @include border-gainsboro;
+    background-color: $white !important;
+    outline: none !important;
+}
+.lt-search-form input{
+    width: 350px;
+    padding: 0 10px ;
+    &:focus{
+        opacity: 1;
+    }
+}
+
+.lt-search-form span{
+    display: flex;
+    opacity: .7;
     align-items: center;
     justify-content: center;
-    color: gainsboro !important;
+    width: 40px !important;
+    text-align: centere;
 }
 
-.lt-input[type=radio]:checked:before{
-    content: 'radio_button_checked' !important;
-    color: $primary !important;
-}
-
-.lt-control{
-    @extend .lt-bg-white;
-    min-height: 45px;
-    height: 45px;
-    outline: none !important;
-    border: none !important;
-    width: 300px;
-    position: relative;
-    overflow: hidden;
-    cursor: pointer;
-    transition: 1s;
-    display: flex;
-    flex-direction: column;
-}
-lt-select option{
-    display: flex;
-    padding: 0 5px;
-    align-items: center;
-    min-height: inherit !important;
-    width:inherit !important;
-    background-color: inherit;
-    transition: inherit;
+.lt-search-form input:valid{
+    border: none;
+    outline: none;
 }
 
 
-lt-select:focus{
-    background-color: pink !important;
+.lt-input{
+    @include radius-25rem;
+    padding: 0 10px;
 }
+// class 
 
-
-lt-select option:hover{
-    @extend .lt-bg-danger;
-    @extend .lt-text-white;
-}

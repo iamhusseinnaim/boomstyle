@@ -42,6 +42,14 @@
     background-color: $green !important;
 }
 
+.lt-btn-warning{
+    background-color: $yellow;
+}
+
 .lt-btn-white{
     @extend .lt-bg-white;
+}
+.lt-btn-dark{
+    @extend .lt-bg-dark;
+    @extend .lt-text-white;
 }
