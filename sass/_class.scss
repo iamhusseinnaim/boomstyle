@@ -235,6 +235,8 @@
 .lt-avatar-lg{
     min-width: 50px !important;
     min-height: 50px !important;
+    max-width: 50px;
+    max-height: 50px;
 }
 .lt-avatar.lt-bg-danger,.lt-avatar.lt-bg-primary{
     @extend .lt-text-white;
@@ -242,10 +244,14 @@
 .lt-avatar-md{
     min-width: 40px !important;
     min-height: 40px !important;
+    max-width: 40px;
+    max-height: 40px;
 }
 .lt-avatar-sm{
     min-width: 30px !important;
     min-height: 30px !important;
+    max-width: 30px;
+    max-height: 30px;
 }
 .lt-avatar img{
     max-width: 100% !important;
