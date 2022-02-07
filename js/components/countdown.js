@@ -1,4 +1,4 @@
-const countDown = (date,id)=>{
+function countDown(date,id){
     var countDate = new Date(date).getTime()
     var currentTime = new Date().getTime()
     var gap = countDate - currentTime
