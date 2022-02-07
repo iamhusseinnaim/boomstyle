@@ -1,0 +1,19 @@
+
+.countdown{
+    display: flex;
+    justify-content: center;
+}
+.countdown span{
+    text-align: center;
+    margin: 0;
+}
+
+
+.countdown > div{
+    margin: 0 10px;
+}
+.countdown span:first-child{
+    font-size: 20px;
+}
+
+
