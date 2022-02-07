@@ -6,19 +6,25 @@
     <meta name="direction" content="test" >
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="./style.css">
-    <link rel="stylesheet" href="./css/LT.min.css">
+    
     <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
     <link rel="stylesheet" href="./css/card.min.css">
+    <link rel="stylesheet" href="./bootstrap-5.1.3-dist/css/bootstrap.min.css">
+    <link rel="stylesheet" href="./css/LT.min.css">
+    <link rel="stylesheet" href="./css/product.min.css">
     <title> LT Frame Work  </title>
+
 </head>
-<body class="lt-rtl">
+<body class="lt-rtl lt-bg-white">
     <nav class="lt-mobile-nav">
         <span class="material-icons show-menu-button">menu</span>
         <img src="./logo.png" width="80" style="object-fit: contain;"  alt="">
 
         <ul class="lt-menu lt-nav-drawer">
                 <div class="lt-nav-drawer-head">
-                    <img alt="HS" src="./image/dress.jpeg"  class="lt-avatar lt-text-white lt-avatar-lg lt-bg-danger" />
+                    <a href="./account.html">
+                        <img alt="HS" src="./image/dress.jpeg"  class="lt-avatar lt-text-white lt-avatar-lg lt-bg-danger" />
+                    </a>
                     <div> 
                         <span class="lt-text-xs lt-text-dark"> Hussein Naim </span>
                     </div>
@@ -101,9 +107,9 @@
                 <span title="" class="material-icons lt-text-danger lt-m-side-5">favorite</span>
                 <small class="lt-text-muted"> المفظلة  </small>
             </a>
-            <div class="lt-avatar-md lt-bg-danger lt-avatar lt-m-side-5 lt-pointer">
+            <a href="./account.html" class="lt-avatar-md lt-bg-danger lt-avatar lt-m-side-5 lt-pointer">
                 <img src="./msg939750663-7289.jpg" alt="HS"  />
-            </div>
+            </a>
         </div>
     </nav>
     <nav class="lt-secondary-nav">
@@ -125,21 +131,65 @@
             <ul>
                 <a href="./single.html"> معاينة المنتج  </a>
                 <a href="./test.html"> test </a>
+                <a href="./products.html">products</a>
+                <a href="./countdown.html"> countdown </a>
             </ul>
         </div>
     </nav>
 
-    <main>
+    <main >
         <section  class="lt-slider-container">
             <ul id="main-slider" class="lt-slider" >
-                <img src="./image/test.png" alt="">
-                <img src="./image/Pink Vintage Happy Valentine's Day (Facebook Cover).png" alt="">
-                <img src="./image/test.png" alt="">
-                <img src="./image/Pink Vintage Happy Valentine's Day (Facebook Cover).png" alt="">
+                <img src="./image/Minimal Aesthetic Hello February Facebook Cover.png" alt="">
             </ul>
             <button  data-action="" class="lt-slider-btn lt-btn lt-btn-dark right-btn material-icons">arrow_forward_ios</button>
             <button  data-action="-" class="lt-slider-btn  lt-btn lt-btn-dark left-btn material-icons">arrow_back_ios</button>
         </section>
+
+
+        <section class=" container justify-content-center lt-top-categories-container  row ">
+            <div class="col-12 row  justify-content-center align-items-center p-0 m-0 mt-4 mb-4 opning-countdown">
+                
+                    
+                <img src="./image/Boom Iraq.png"   alt="" style="object-fit: cover;object-position: center;max-height: 400px;" class="col-12">
+
+
+                <div class="col-12 lt-text-white p-2 lt-bg-dark">
+                    <div id="countdown" class="countdown">
+
+                        <div id="day" class="day">
+                            <h1 class="text"></h1>
+                            <span> يوم </span>
+                        </div>
+                        <div id="hour" class="hour">
+                            <h1 class="text"> </h1>
+                            <span> ساعة </span>
+                        </div>
+                        <div id="minute" class="minute">
+                            <h1 class="text"></h1>
+                            <span> دقيقة </span>
+                        </div>
+                        <div id="second" class="second">
+                            <h1 class="text"></h1>
+                            <span> ثانية  </span>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+            <img src="./image/Loud & Clear.png" alt="" class="col-lg-4 col-md-6 col-12">
+            <img src="./image/Loud & Clear(1).png" alt="" class="col-lg-4 col-md-6 col-12">
+            <img src="./image/Loud & Clear(2).png" alt="" class="col-lg-4 col-md-6 col-12">
+            <img src="./image/men's_shoes.png" alt="" class="col-lg-4 col-md-6 col-12">
+            <img src="./image/babies.png" alt="" class="col-lg-4 col-md-6 col-12">
+            <img src="./image/makeup.png" alt="" class="col-lg-4 col-md-6 col-12">
+
+
+            <section id="deals">
+
+            </section>
+        </section>
+
     </main>
 
 
@@ -147,7 +197,37 @@
     <!-- scripts  -->
     <script src="./js/jquery-3.6.0.min.js"></script>
     <script src="./js/dist/main.js"></script>
+    <script src="./index.js"></script>
+    <script src="./js/components/countdown.js"></script>
+    <script>
+        newSlider("#main-slider")
+        countDown('Mar 10,2022 00:00:00',"#countdown")
+        $.ajax({
+            type: "get",
+            url: "./beauty.html",
+            success: function (response) {
+                $('#deals').append(response);
+            }
+        });
+        
+        $.ajax({
+            type: "get",
+            url: "./deals.html",
+            success: function (response) {
+                $('#deals').append(response);
+                countDown("April 1,2022 00:00:00","#timer")
+            }
+        });
 
+        $.ajax({
+            type: "get",
+            url: "./electronic.html",
+            success: function (response) {
+                $('#deals').append(response);
+            }
+        });
+
+    </script>
 
 </body>
 </html>

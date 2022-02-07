@@ -21,6 +21,9 @@
     font-size: 18px;
 }
 
+
+
+
 .lt-tabs-dark .lt-tabs-head{
     @extend .lt-bg-dark;
 }
@@ -78,7 +81,6 @@
     display: block !important;
 }
 .lt-tab-layer{
-    @extend .lt-bg-light;
     height: 100%;
     width: 100%;
     display: none;
@@ -101,3 +103,7 @@
 }
 
 
+
+.lt-tabs-column{
+    
+}
