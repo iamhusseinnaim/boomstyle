@@ -37,7 +37,7 @@ eval("__webpack_require__.r(__webpack_exports__);\n/* harmony export */ __webpac
 /***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
 
 "use strict";
-eval("__webpack_require__.r(__webpack_exports__);\n/* harmony export */ __webpack_require__.d(__webpack_exports__, {\n/* harmony export */   \"default\": () => (/* binding */ Navigations)\n/* harmony export */ });\nclass Navigations {\n  constructor() {\n    this.toggle_drawer_tab();\n  }\n\n  toggle_drawer_tab() {\n    $('.lt-nav-drawer-item').click(function (e) {\n      e.preventDefault();\n      $(this).addClass('lt-active-nav-drawer-item');\n      $(this).siblings().removeClass('lt-active-nav-drawer-item');\n    });\n  }\n\n}\nnew Navigations();\n\n//# sourceURL=webpack://my-webpack-project/./components/navigations.js?");
+eval("__webpack_require__.r(__webpack_exports__);\n/* harmony export */ __webpack_require__.d(__webpack_exports__, {\n/* harmony export */   \"default\": () => (/* binding */ Navigations)\n/* harmony export */ });\nclass Navigations {\n  constructor() {\n    this.toggle_drawer_tab();\n  }\n\n  toggle_drawer_tab() {\n    $('.lt-nav-drawer-item').click(function (e) {\n      $(this).addClass('lt-active-nav-drawer-item');\n      $(this).siblings().removeClass('lt-active-nav-drawer-item');\n    });\n  }\n\n}\nnew Navigations();\n\n//# sourceURL=webpack://my-webpack-project/./components/navigations.js?");
 
 /***/ }),
 
