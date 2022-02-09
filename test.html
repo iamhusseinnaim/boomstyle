@@ -96,9 +96,7 @@
         <!-- tabs container  -->
     
     <div class="lt-wide-cards">
-        <img src="./image/b1.png" alt="">
-        <img src="./image/b2.png" alt="">
-        <img src="./image/b3.png" alt="">
+
     </div>
 
 
@@ -107,6 +105,19 @@
     <script src="./js/dist/main.js"></script>
     <script src="./index.js"></script>
 
-
+    <script>
+            $('.layer img').click(function (e) { 
+            e.preventDefault();
+            let url_part = $(this).data("url-part")
+            let url_input = $('input[name=url]')
+            url_input.val(url_input.val()+'&'+url_part)
+            $(this).parent().removeClass('active-layer');
+            $(this).parent().next().addClass('active-layer')
+            if($(this).parent().attr("id") == 'last'){
+                location = '/?url='+url_input.val()
+            }
+        });
+    </script>
+    
 </body>
 </html>
