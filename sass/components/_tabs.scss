@@ -59,11 +59,7 @@
         padding: 10px !important;
     }
 }
-.active-tab{
-    transition: .5s;
-    display: block !important;
-    z-index: 1 !important;
-}
+
 .tab-border .tab-nav{
     border: 1px solid gainsboro;
 }
@@ -102,4 +98,10 @@
     label,input,select{
         font-size: 16px !important;
     }
+}
+
+.active-tab{
+    transition: .5s;
+    display: block !important;
+    z-index: 1 !important;
 }
