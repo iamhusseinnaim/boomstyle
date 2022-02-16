@@ -1,0 +1,35 @@
+.boom-radio{
+    appearance: none;
+    border:1px solid;
+    padding:5px 10px;
+    margin: 5px ;
+    transition: .5s;
+    width: fit-content;
+    border-radius: .25rem;
+    overflow: hidden;
+    text-align: center;
+}
+.boom-radio::after{
+    @extend .boom-radio;
+    content: attr(data-label);
+    background: none !important;
+    padding: 0 !important;
+    margin: 0 !important;
+    border: none;
+}
+
+.boom-radio:checked{
+    background-color: var(--dark);
+    color: white;
+}
+
+.boom-color-circle{
+    appearance: none;
+    width: 20px;
+    height: 20px;
+    border-radius: 50%;
+    margin: 3px ;
+}
+.boom-color-circle:checked{
+    outline: 3px solid rgba(57, 57, 255, 0.479);
+}

@@ -1,0 +1,50 @@
+
+/* Chrome, Safari, Edge, Opera */
+.boom-number::-webkit-outer-spin-button,
+.boom-number::-webkit-inner-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}
+.boom-number{
+    height: 45px !important;
+    position: relative;
+}
+
+
+/* Firefox */
+.boom-number[type=number] {
+  -moz-appearance: textfield;
+  text-align: center;
+  max-width:100px !important;
+}
+
+.boom-container-number{
+    direction: rtl;
+    display: flex;
+    align-items: center;
+    border:1px solid gainsboro;
+    border-radius: .25rem;
+    overflow: hidden;
+    width: 100% !important; 
+    padding: 10px 5px ;
+    *{
+        border: none ;
+        &:active,&:valid{
+            border: none;
+            outline: none;
+            box-shadow: none;
+        }
+    }
+}
+.boom-number-button{
+    outline: none;
+    border: none;
+    box-shadow:none;
+    margin:0 3px;
+}
+
+.button{
+    border: none;
+    background-color: white;
+    padding: 3px;
+}

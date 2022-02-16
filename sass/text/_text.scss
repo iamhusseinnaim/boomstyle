@@ -1,0 +1,52 @@
+.lt-text-sm{
+    font-size: 100px !important;
+}
+.icon{
+    font-size: 20px !important;
+}
+.text-xs{
+    font-size: 14px !important;
+}
+
+
+.muted-not-hover{
+    opacity: .7 !important;
+    transition: .5s;
+}
+
+.muted-not-hover:hover{
+    opacity: 1 !important;
+}
+.popup-title{
+    transition: .5s;
+    position: relative;
+    text-decoration: none;
+}
+.popup-title::after{
+    content: attr(data-title);
+    width: 100px;
+    top: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: .25rem;
+    text-align: center;
+    color: white;
+    opacity: 1;
+    display: none;
+    font-size: 16px;
+    z-index: 100;
+    position: absolute;
+    background-color: black;
+    left: 0;
+    right: 0;
+    margin: auto;
+    padding: 10px;
+}
+.popup-title:hover::after{
+    display: block;
+}
+
+.text-gold{
+    color: gold !important;
+}

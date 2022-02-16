@@ -1,0 +1,20 @@
+@import '../colors/root';
+@import '../icons';
+@import '../global/global';
+@import '../helpers/class/main';
+@import '../navigations/web/webnav';
+@import '../navigations/mobile/mobilenav';
+@import '../helpers/backgrounds/backgrounds';
+@import '../text/text' ;
+@import '../forms/input';
+@import '../auth/avatars';
+@import '../components/chips';
+@import '../components/aside';
+@import '../shop/cart';
+@import '../components/tabs';
+@import '../forms/group'; 
+@import '../menus/menu';
+
+html,body{
+    scrollbar-width: thin;
+}
