@@ -5,9 +5,9 @@ const button = function(classList,dataAction,icon=null,text=''){
     if(!icon){
         return $(`<button data-action="${dataAction}" class="${classList}">${text}</button>`)
     }
-    var button = `<button data-action="${dataAction}" class="${classList}">${text}</button>`
-    $(button).append(icon)
-    return button   
+    var buttonele = `<button data-action="${dataAction}" class="${classList}">${text}</button>`
+    $(buttonele).append(icon)
+    return buttonele   
 }
 
 
