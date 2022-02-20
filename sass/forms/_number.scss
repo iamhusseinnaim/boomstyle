@@ -6,7 +6,6 @@
   margin: 0;
 }
 .boom-number{
-    height: 45px !important;
     position: relative;
 }
 
@@ -16,6 +15,7 @@
   -moz-appearance: textfield;
   text-align: center;
   max-width:100px !important;
+  max-height: 35px !important;
 }
 
 .boom-container-number{
@@ -24,9 +24,9 @@
     align-items: center;
     border:1px solid gainsboro;
     border-radius: .25rem;
-    overflow: hidden;
-    width: 100% !important; 
-    padding: 10px 5px ;
+    max-width: 200px;
+    height: 100% !important;
+    padding: 5px 10px ;
     *{
         border: none ;
         &:active,&:valid{

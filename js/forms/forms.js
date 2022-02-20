@@ -36,13 +36,25 @@ function handleClickEvent(element){
         var input = $(this).siblings('.boom-number')
         if($(this).data('action') == 'up'){
             if(parseInt(input.val())){
-                input.val(parseInt(input.val())+1)
+                if(!input.attr('max')){
+                    input.val(parseInt(input.val())+1)
+                }else if(parseInt(input.val()) < parseInt(input.attr('max') ) ){
+                    input.val(parseInt(input.val())+1)
+                }else{
+                    return false
+                }
             }else{
-                input.val(1)
+                return false
             }
         }else{
             if(parseInt(input.val()) >=1){
-                input.val(parseInt(input.val())-1)
+                if(!input.attr('min')){
+                    input.val(parseInt(input.val())-1)
+                }else if(parseInt(input.val()) > parseInt(input.attr('min'))){
+                    input.val(parseInt(input.val())-1)
+                }else{
+                    return false
+                }
             }else{
                 return false
             }

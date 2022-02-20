@@ -5,6 +5,25 @@
 }
 
 .boom-input{
-    height: 45px;
+    max-height: 45px;
+    min-height: 40px;
     font-size :20px !important;
+    border: 1px solid gainsboro;
+    padding: 5px !important;
+    font-size: inherit !important;
+    transition: .5s;
+    width: 100%;
+    margin-top: 5px;
+    margin-bottom: 5px;
+}
+.boom-input:focus{
+    transition: .5s;
+    outline: 5px solid aliceblue;
+    border: 1px solid aliceblue;
+    box-shadow: none;
+}
+.boom-input:invalid,.boom-input:out-of-range{
+    outline: 3px solid rgba(255, 65, 65, 0.356);
+    border: none;
+    
 }
