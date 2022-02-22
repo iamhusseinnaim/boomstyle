@@ -1,1 +1,1 @@
-.sticky-sidebar{position:fixed;right:0;right:20px;overflow:hidden;z-index:10;background-color:white;height:75%;scrollbar-width:thin;padding-bottom:100px}.sticky-sidebar .aside-content{height:95%;scrollbar-width:thin;overflow-y:scroll;padding-bottom:20px}
+.sticky-sidebar{position:fixed;right:0;right:20px;z-index:10;overflow-y:scroll;background-color:white;height:70% !important;scrollbar-width:thin;padding-bottom:100px}.sticky-sidebar .aside-content{overflow-y:scroll !important;height:95%;scrollbar-width:thin;overflow-y:scroll;padding-bottom:20px}

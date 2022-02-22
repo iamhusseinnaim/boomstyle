@@ -35,3 +35,7 @@
 .contain{
     object-fit: contain !important;
 }
+
+.blur{
+    filter: blur(3px);
+}

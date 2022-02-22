@@ -6,3 +6,4 @@ partial
 index.html
 html
 sass
+*.py
