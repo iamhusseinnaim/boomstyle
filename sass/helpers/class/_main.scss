@@ -39,3 +39,13 @@
 .blur{
     filter: blur(3px);
 }
+
+.ov-x-scroll{
+    overflow-x: auto !important;
+    scrollbar-width: thin;
+}
+
+
+.scrollbar-white{
+    scrollbar-color: gainsboro white;
+}
