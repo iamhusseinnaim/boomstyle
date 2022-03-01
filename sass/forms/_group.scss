@@ -3,3 +3,33 @@
 @import './checkbox';
 @import './radio';
 @import './number';
+
+.select-container{
+    display:flex;
+    align-items: center;
+    border-left: 1px solid gainsboro;
+    position: relative;
+    select{
+        border:none !important;
+        cursor: pointer;
+        width: 100%;
+    }
+
+    .material-icons{
+        position: absolute;
+        left: 0;
+        opacity: .7;
+    }
+
+
+    
+}
+
+.search-form{
+    font-size: 18px !important;
+
+    input,select,.material-icons{
+        background: none;
+
+    }
+}
