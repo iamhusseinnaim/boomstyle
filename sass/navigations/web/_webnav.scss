@@ -55,18 +55,7 @@ nav{
         align-items: center;
         justify-content: center;
         flex-direction: column;
-        // drop menu
-        .drop-menu{
-            min-width: 100%;
-            position: absolute;
-            padding: 20px;
-            top: 90%;
-            z-index:10;
-            display: none;
-            .nav-link{
-                @extend .nav-link;
-            }
-        }
+
 
         .drop-link{
             position: static;
@@ -102,4 +91,28 @@ nav{
         display: none;
     }
     
+}
+
+.categories-menu{
+    width: 100%;
+    position: absolute;
+    padding:20px;
+    background: white;
+    z-index: 9999999999999 !important;
+    top: 90%;
+    right: -12px !important;
+    height: 450px;
+    overflow-y: auto;   
+    scrollbar-width: thin;
+    margin: auto !important;
+    display: block !important;
+    border-top: 1px solid gainsboro;
+    border-bottom: 1px solid gainsboro;
+
+    li{
+        margin: 10px 0;
+        list-style: none;
+        border-bottom: 1px solid gainsboro; 
+        padding: 10px;
+    }
 }
