@@ -11,7 +11,24 @@ $(document).ready(function () {
         }
     }
 
+    $('.drop-menu-link').hover(function () {
+            // over
+            $($(this).data('drop')).show('slow');
+        }, function () {
+        }
+    );
+
 });
+
+$('#categories-menu').hover(function () {
+        // over
+        $(this).show('slow');
+        
+    }, function () {
+        // out
+        $(this).hide('slow');
+    }
+);
 
 
 // mobile nav
@@ -24,3 +41,5 @@ $('.mobile-nav').css({
     e.preventDefault();
     $('.mobile-nav').toggleClass('show-mobile-nav');
   });
+
+
