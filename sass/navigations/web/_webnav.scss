@@ -98,14 +98,13 @@ nav{
     position: absolute;
     padding:20px;
     background: white;
-    z-index: 9999999999999 !important;
     top: 90%;
-    right: -12px !important;
-    height: 450px;
+    right: 0px !important;
+    min-height: 100% !important;
     overflow-y: auto;   
     scrollbar-width: thin;
     margin: auto !important;
-    display: block !important;
+    display: none;
     border-top: 1px solid gainsboro;
     border-bottom: 1px solid gainsboro;
 
@@ -114,5 +113,9 @@ nav{
         list-style: none;
         border-bottom: 1px solid gainsboro; 
         padding: 10px;
+        &:last-child{
+            border-bottom: none;
+        }
     }
+    z-index: -1 !important;
 }
