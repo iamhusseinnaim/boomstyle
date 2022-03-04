@@ -22,6 +22,7 @@ $(document).ready(function () {
 
 $('.categories-menu').hover(function () {
         // over
+        $('.categories-menu').hide('slow');
         $(this).show('slow');
         
     }, function () {
