@@ -20,7 +20,7 @@ $(document).ready(function () {
 
 });
 
-$('#categories-menu').hover(function () {
+$('.categories-menu').hover(function () {
         // over
         $(this).show('slow');
         
