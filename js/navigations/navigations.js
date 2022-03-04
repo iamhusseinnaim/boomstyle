@@ -13,6 +13,7 @@ $(document).ready(function () {
 
     $('.drop-menu-link').hover(function () {
             // over
+            $('.categories-menu').hide('slow');
             $($(this).data('drop')).show('slow');
         }, function () {
         }
