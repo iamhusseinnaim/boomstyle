@@ -8,7 +8,9 @@ class BoomMenu{
         searchPlaceholder:'new menu instance',
         searchID:"boom-menu-search-input",
         menuClass:'bg-light',
-        menuId:"boom-menu"
+        menuId:"boom-menu",
+        defaultSearchText:'',
+        defaultHolderValue:''
     }){
         
         this.target = target
@@ -51,8 +53,8 @@ class BoomMenu{
  
 
     render(){
-        var holder = `<input type="text" class="d-none" name="${this.config.holderName}" />`
-        var search = `<input type="text"  name="${this.config.searchName}" placeholder="${this.config.searchPlaceholder}" />`
+        var holder = `<input value="${this.config.defaultHolderValue}" type="text" class="d-none" name="${this.config.holderName}" />`
+        var search = `<input value="${this.config.defaultSearchText}" type="text"  name="${this.config.searchName}" placeholder="${this.config.searchPlaceholder}" />`
         var icon = '<i class="fi fi-rr-angle-small-down"></i>'
         var children =$(this.target).children()
         var container = document.createElement("div")
