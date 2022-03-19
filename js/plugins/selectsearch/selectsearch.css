@@ -1,0 +1,57 @@
+.boom-menu{
+    padding: 10px;
+    text-align: center;
+    position: relative;
+    width: 100%;
+    background-color: white;
+    min-height: 40px;
+    display: flex;
+    scrollbar-width: thin;
+    align-items: center;
+}
+
+
+
+.boom-menu input,.boom-menu input:focus,.boom-menu input:valid,.boom-menu input:invalid{
+    border: none !important;
+    outline: none !important;
+    min-height: 100% !important;
+    position: absolute;
+    width: 90%;
+    
+
+}
+.boom-menu i{
+    position: absolute;
+    left: 10px;
+}
+.boom-menu menu{
+    height: 500px ;
+    overflow-y: auto;
+    position: absolute;
+    top: 100%;
+    width: 100%;
+    z-index: 1000000;
+    display: none;
+    right: 0;
+    scrollbar-width: thin;
+}
+
+.boom-menu .value-holder{
+    display: none;
+}
+.boom-menu menu option{
+    width: 100%;
+    font-size: 18px;
+    padding: 10px;
+    text-align: right;
+    transition: .2s;
+    border-bottom: 1px solid white;
+}
+.boom-menu menu option:hover{
+    cursor: pointer;
+    background-color: white !important;
+}
+.boom-menu menu option:last-child{
+    border-bottom: none;
+}
