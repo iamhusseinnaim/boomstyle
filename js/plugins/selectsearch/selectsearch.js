@@ -17,7 +17,7 @@ class BoomMenu{
         this.status = 'close'
         this.config = config
         this.render()
-        $(`[name=${this.config.holderName}]`).val('')
+
         // events 
         this.events()
 
